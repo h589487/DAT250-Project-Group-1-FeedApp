@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <h1>Poll Application</h1>
+    </header>
+
+    <main>
+      <CreatePoll />
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CreatePoll from "./components/CreatePoll.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    CreatePoll,
+  },
+};
 </script>
 
 <style>
+/* Basic styles for the app */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+}
+
+header {
+  background-color: #42b983;
+  padding: 20px;
+  color: white;
+}
+
+main {
+  padding: 20px;
 }
 </style>
